@@ -19,33 +19,32 @@
         }
     </script>
     <style>
-        /* Gestion simple des langues */
-        body.lang-en .lang-fr { display: none !important; }
-        body.lang-fr .lang-en { display: none !important; }
-        .lang-en { display: none; } /* Par défaut, l'anglais est caché */
+        /* Gestion sécurisée des langues via attribut de données */
+        [data-lang="fr"] .lang-en { display: none !important; }
+        [data-lang="en"] .lang-fr { display: none !important; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300 lang-fr">
+<body data-lang="fr" class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
 
-    <!-- Navigation Fixe (Sticky) -->
+    <!-- Navigation Fixe -->
     <nav class="bg-white/90 dark:bg-slate-800/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
             
             <!-- Nom et Prénom -->
             <a href="#" class="font-bold text-xl text-primary tracking-tight">
-                Jean Dupont <!-- REMPLACE PAR TON NOM -->
+                Jean Dupont
             </a>
 
-            <!-- Liens de navigation -->
+            <!-- Liens de navigation mis à jour dans le bon ordre -->
             <div class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="#apropos" class="hover:text-primary transition">
                     <span class="lang-fr">À propos</span><span class="lang-en">About</span>
                 </a>
-                <a href="#projets" class="hover:text-primary transition">
-                    <span class="lang-fr">Projets</span><span class="lang-en">Projects</span>
-                </a>
                 <a href="#experience" class="hover:text-primary transition">
                     <span class="lang-fr">Expérience</span><span class="lang-en">Experience</span>
+                </a>
+                <a href="#projets" class="hover:text-primary transition">
+                    <span class="lang-fr">Projets</span><span class="lang-en">Projects</span>
                 </a>
                 <a href="#contacts" class="hover:text-primary transition">
                     <span class="lang-fr">Contacts</span><span class="lang-en">Contact</span>
@@ -74,7 +73,8 @@
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-4 py-12 space-y-24">
+    <!-- Espacement géant (space-y-40) pour aérer les rubriques -->
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-40">
 
         <!-- 1. À propos de moi -->
         <section id="apropos" class="scroll-mt-24">
@@ -90,7 +90,6 @@
                 </p>
             </div>
 
-            <!-- Elevator Pitch -->
             <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 mb-10">
                 <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-microphone text-primary mr-2"></i> Elevator Pitch</h3>
                 <div class="aspect-video bg-slate-900 rounded-xl flex items-center justify-center text-white shadow-inner">
@@ -99,9 +98,7 @@
                 </div>
             </div>
 
-            <!-- Skills & Activités -->
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Skills -->
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
                     <h3 class="text-xl font-bold mb-4"><i class="fa-solid fa-code text-primary mr-2"></i> <span class="lang-fr">Compétences</span><span class="lang-en">Skills</span></h3>
                     <div class="flex flex-wrap gap-2">
@@ -111,7 +108,6 @@
                         <span class="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-primary dark:text-indigo-300 text-sm font-semibold rounded-lg border border-indigo-100 dark:border-indigo-800">React</span>
                     </div>
                 </div>
-                <!-- Activités -->
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
                     <h3 class="text-xl font-bold mb-4"><i class="fa-solid fa-person-running text-primary mr-2"></i> <span class="lang-fr">Activités</span><span class="lang-en">Activities</span></h3>
                     <div class="flex flex-wrap gap-2">
@@ -123,7 +119,87 @@
             </div>
         </section>
 
-        <!-- 2. Projets -->
+        <!-- 2. Expérience et Formation (Maintenant avant les Projets) -->
+        <section id="experience" class="scroll-mt-24">
+            
+            <!-- Sous-rubrique : Expériences Professionnelles -->
+            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
+                <i class="fa-solid fa-briefcase text-primary mr-3"></i> 
+                <span class="lang-fr">Expériences Professionnelles</span><span class="lang-en">Professional Experience</span>
+            </h2>
+            
+            <div class="space-y-4 mb-16">
+                <!-- Expérience 1 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                            <span class="lang-fr">Stage Assistant Ingénieur</span>
+                            <span class="lang-en">Assistant Engineer Internship</span>
+                        </h3>
+                        <p class="text-primary font-medium text-sm">Entreprise XYZ | Mai 2023 - Août 2023</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-md">
+                        <span class="lang-fr">Développement d'outils internes et automatisation de processus via Python.</span>
+                        <span class="lang-en">Development of internal tools and process automation using Python.</span>
+                    </p>
+                </div>
+                <!-- Expérience 2 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                            <span class="lang-fr">Job Étudiant - Support Informatique</span>
+                            <span class="lang-en">Student Job - IT Support</span>
+                        </h3>
+                        <p class="text-primary font-medium text-sm">Université | Septembre 2022 - Juin 2023</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-md">
+                        <span class="lang-fr">Assistance technique aux étudiants et maintenance du parc informatique.</span>
+                        <span class="lang-en">Technical assistance for students and IT equipment maintenance.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sous-rubrique : Parcours & Formations -->
+            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
+                <i class="fa-solid fa-graduation-cap text-primary mr-3"></i> 
+                <span class="lang-fr">Parcours & Formations</span><span class="lang-en">Education & Background</span>
+            </h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">École d'Ingénieurs (Cycle Master)</h3>
+                        <p class="text-primary font-medium text-sm">2024 - Présent</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
+                        <span class="lang-fr">Spécialisation en Informatique et Systèmes d'Information.</span>
+                        <span class="lang-en">Specialization in Computer Science and Information Systems.</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Classe Préparatoire aux Grandes Écoles</h3>
+                        <p class="text-primary font-medium text-sm">2022 - 2024</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
+                        <span class="lang-fr">Filière Mathématiques et Physique (MP).</span>
+                        <span class="lang-en">Mathematics and Physics (MP) track.</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Lycée Général</h3>
+                        <p class="text-primary font-medium text-sm">Obtenu en 2022</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
+                        <span class="lang-fr">Baccalauréat Mention Très Bien, Spécialités Maths & Physique.</span>
+                        <span class="lang-en">High School Diploma with High Honors, Maths & Physics.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Projets (Maintenant après l'Expérience) -->
         <section id="projets" class="scroll-mt-24">
             <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
                 <i class="fa-solid fa-folder-open text-primary mr-3"></i> 
@@ -147,72 +223,6 @@
                         <span class="lang-en">C++ programming of a robot capable of avoiding obstacles.</span>
                     </p>
                     <a href="#" class="text-primary font-medium hover:underline text-sm"><i class="fa-brands fa-github mr-1"></i> Voir sur GitHub</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Expérience et Formation -->
-        <section id="experience" class="scroll-mt-24">
-            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
-                <i class="fa-solid fa-graduation-cap text-primary mr-3"></i> 
-                <span class="lang-fr">Parcours & Formations</span><span class="lang-en">Education & Background</span>
-            </h2>
-            
-            <div class="space-y-4 mb-12">
-                <!-- École -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
-                    <div>
-                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">École d'Ingénieurs (Cycle Master)</h3>
-                        <p class="text-primary font-medium text-sm">2024 - Présent</p>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
-                        <span class="lang-fr">Spécialisation en Informatique et Systèmes d'Information.</span>
-                        <span class="lang-en">Specialization in Computer Science and Information Systems.</span>
-                    </p>
-                </div>
-                <!-- Prépa -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
-                    <div>
-                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Classe Préparatoire aux Grandes Écoles</h3>
-                        <p class="text-primary font-medium text-sm">2022 - 2024</p>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
-                        <span class="lang-fr">Filière Mathématiques et Physique (MP).</span>
-                        <span class="lang-en">Mathematics and Physics (MP) track.</span>
-                    </p>
-                </div>
-                <!-- Lycée -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
-                    <div>
-                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Lycée Général</h3>
-                        <p class="text-primary font-medium text-sm">Obtenu en 2022</p>
-                    </div>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
-                        <span class="lang-fr">Baccalauréat Mention Très Bien, Spécialités Maths & Physique.</span>
-                        <span class="lang-en">High School Diploma with High Honors, Maths & Physics.</span>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Role Models -->
-            <h3 class="text-2xl font-bold mb-6 flex items-center text-slate-800 dark:text-slate-200">
-                <i class="fa-solid fa-users-viewfinder text-primary mr-3"></i> Mes 3 Rôles Modèles
-            </h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <h4 class="font-bold text-lg mb-2">Role Model 1</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Directeur Technique (CTO) dans la Tech.</p>
-                    <p class="text-xs text-slate-500 dark:text-slate-500 italic">"M'inspire par sa vision stratégique et sa gestion d'équipe."</p>
-                </div>
-                <div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <h4 class="font-bold text-lg mb-2">Role Model 2</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Entrepreneur Engagé.</p>
-                    <p class="text-xs text-slate-500 dark:text-slate-500 italic">"Modèle de résilience et d'impact environnemental."</p>
-                </div>
-                <div class="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <h4 class="font-bold text-lg mb-2">Role Model 3</h4>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">Alumni de mon école.</p>
-                    <p class="text-xs text-slate-500 dark:text-slate-500 italic">"Parcours international remarquable (Expatriation au Japon)."</p>
                 </div>
             </div>
         </section>
@@ -250,7 +260,6 @@
                         </div>
                     </div>
 
-                    <!-- Bouton CV rappel en bas -->
                     <div class="flex items-center space-x-4">
                         <a href="assets/CV_FR.pdf" id="cvBtnFooter" class="bg-white text-primary hover:bg-slate-100 font-bold px-6 py-3 rounded-xl transition shadow-sm flex items-center w-full justify-center">
                             <i class="fa-solid fa-download mr-2"></i> 
@@ -263,17 +272,14 @@
 
     </main>
 
-    <!-- Footer minimaliste -->
-    <footer class="text-center py-6 text-slate-500 dark:text-slate-400 text-sm border-t border-slate-200 dark:border-slate-800">
+    <footer class="text-center py-6 text-slate-500 dark:text-slate-400 text-sm border-t border-slate-200 dark:border-slate-800 mt-20">
         <p>&copy; 2026 Jean Dupont. <span class="lang-fr">Tous droits réservés.</span><span class="lang-en">All rights reserved.</span></p>
     </footer>
 
-    <!-- Scripts JavaScript pour l'interactivité -->
     <script>
-        // --- GESTION DU THÈME (Sombre/Clair) ---
+        // --- GESTION DU THÈME ---
         const themeToggleBtn = document.getElementById('themeToggle');
         
-        // Vérifie les préférences système au chargement
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         } else {
@@ -289,26 +295,24 @@
             }
         });
 
-        // --- GESTION DE LA LANGUE (FR/EN) ---
+        // --- GESTION DE LA LANGUE SÉCURISÉE ---
         const langToggleBtn = document.getElementById('langToggle');
         const cvBtn = document.getElementById('cvBtn');
         const cvBtnFooter = document.getElementById('cvBtnFooter');
         
-        let currentLang = 'fr'; // Par défaut
+        let currentLang = 'fr';
 
         langToggleBtn.addEventListener('click', () => {
             const body = document.body;
             
             if (currentLang === 'fr') {
-                body.classList.replace('lang-fr', 'lang-en');
+                body.setAttribute('data-lang', 'en');
                 currentLang = 'en';
-                // Changement des liens CV
                 cvBtn.href = 'assets/CV_EN.pdf';
                 cvBtnFooter.href = 'assets/CV_EN.pdf';
             } else {
-                body.classList.replace('lang-en', 'lang-fr');
+                body.setAttribute('data-lang', 'fr');
                 currentLang = 'fr';
-                // Changement des liens CV
                 cvBtn.href = 'assets/CV_FR.pdf';
                 cvBtnFooter.href = 'assets/CV_FR.pdf';
             }
