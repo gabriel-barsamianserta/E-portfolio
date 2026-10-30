@@ -35,7 +35,7 @@
                 Gabriel Barsamian-Serta
             </a>
 
-            <!-- Liens de navigation mis à jour dans le bon ordre -->
+            <!-- Liens de navigation -->
             <div class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="#apropos" class="hover:text-primary transition">
                     <span class="lang-fr">À propos</span><span class="lang-en">About</span>
@@ -73,7 +73,7 @@
         </div>
     </nav>
 
-    <!-- Espacement géant (space-y-40) pour aérer les rubriques -->
+    <!-- Espacement principal -->
     <main class="max-w-5xl mx-auto px-4 py-16 space-y-40">
 
         <!-- 1. À propos de moi -->
@@ -85,8 +85,8 @@
                     <span class="lang-en">Digital Engineering Student</span>
                 </h2>
                 <p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                    <span class="lang-fr">Étudiant en première année d'école d'ingénieur du numérique, je suis motivé, curieux et rigoureux. Intéressé par l'innovation et le travail en équipe, je suis prêt à m'investir dans des missions variées et à apprendre rapidement sur le terrain.</span>
-                    <span class="lang-en">First-year digital engineering student, I am motivated, curious, and rigorous. Interested in innovation and teamwork, I am eager to commit to diverse assignments and learn quickly on the ground.</span>
+                    <span class="lang-fr">Étudiant en informatique passionné par les algorithmes, la sécurité des systèmes et la création de solutions logicielles efficaces. À la recherche de stages pour appliquer mes connaissances à des projets concrets.</span>
+                    <span class="lang-en">Computer science student passionate about algorithms, system security, and creating efficient software solutions. Looking for internships to apply my knowledge to real-world projects.</span>
                 </p>
             </div>
 
@@ -246,23 +246,17 @@
                 <span class="lang-fr">Mes Projets</span><span class="lang-en">My Projects</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Projet 1 (Placeholder) -->
+                <!-- Projet Unique -->
                 <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-2">[Titre du Projet 1]</h3>
+                    <h3 class="text-xl font-bold mb-2">Extension Chrome Fnac</h3>
                     <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
-                        <span class="lang-fr">Description brève d'un projet réalisé à l'ENSEEIHT ou en prépa (ex: développement Python).</span>
-                        <span class="lang-en">Brief description of a project done in engineering school (e.g., Python development).</span>
+                        <span class="lang-fr">Extension web développée pour Google Chrome permettant d'automatiser l'achat des produits présents dans le panier Fnac.</span>
+                        <span class="lang-en">Web extension developed for Google Chrome that automates the purchase of products in the Fnac shopping cart.</span>
                     </p>
-                    <a href="#" class="text-primary font-medium hover:underline text-sm"><i class="fa-brands fa-github mr-1"></i> Voir sur GitHub</a>
-                </div>
-                <!-- Projet 2 (Placeholder) -->
-                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-2">[Titre du Projet 2]</h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
-                        <span class="lang-fr">Description brève d'un autre projet pertinent pour ton profil d'ingénieur.</span>
-                        <span class="lang-en">Brief description of another relevant engineering project.</span>
-                    </p>
-                    <a href="#" class="text-primary font-medium hover:underline text-sm"><i class="fa-brands fa-github mr-1"></i> Voir sur GitHub</a>
+                    <a href="https://github.com/gabriel-barsamianserta/fnac-extension.git" target="_blank" class="text-primary font-medium hover:underline text-sm inline-flex items-center">
+                        <i class="fa-brands fa-github mr-2"></i> 
+                        <span class="lang-fr">Voir sur GitHub</span><span class="lang-en">View on GitHub</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -293,10 +287,10 @@
                     </div>
 
                     <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl"><i class="fa-brands fa-linkedin"></i></div>
                         <div>
-                            <p class="text-indigo-200 text-sm"><span class="lang-fr">Adresse</span><span class="lang-en">Location</span></p>
-                            <a href="#" class="font-semibold text-sm">91370 Verrières-le-buisson</a>
+                            <p class="text-indigo-200 text-sm">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/gabriel-barsamian-serta-4055a5366/" target="_blank" class="font-semibold hover:underline text-sm break-all">Gabriel Barsamian-Serta</a>
                         </div>
                     </div>
 
@@ -348,12 +342,12 @@
             if (currentLang === 'fr') {
                 body.setAttribute('data-lang', 'en');
                 currentLang = 'en';
-                cvBtn.href = 'CV_GBS_EN.pdf'; // Lien mis à jour
+                cvBtn.href = 'CV_GBS_EN.pdf';
                 cvBtnFooter.href = 'CV_GBS_EN.pdf';
             } else {
                 body.setAttribute('data-lang', 'fr');
                 currentLang = 'fr';
-                cvBtn.href = 'CV_GBS_FR.pdf'; // Lien mis à jour
+                cvBtn.href = 'CV_GBS_FR.pdf';
                 cvBtnFooter.href = 'CV_GBS_FR.pdf';
             }
         });
