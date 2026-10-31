@@ -19,7 +19,7 @@
         }
     </script>
     <style>
-        /* Gestion sécurisée des langues via attribut de données */
+        /* Gestion sécurisée des langues */
         [data-lang="fr"] .lang-en { display: none !important; }
         [data-lang="en"] .lang-fr { display: none !important; }
     </style>
@@ -73,9 +73,225 @@
         </div>
     </nav>
 
-    <!-- Espacement principal -->
-    <main class="max-w-5xl mx-auto px-4 py-16 space-y-40">
+    <!-- Espacement principal ajusté (space-y-20 au lieu de space-y-40) pour éviter les grands "trous blancs" -->
+    <main class="max-w-5xl mx-auto px-4 py-16 space-y-20">
 
         <!-- 1. À propos de moi -->
         <section id="apropos" class="scroll-mt-24">
-            <div class="text-center mb
+            <div class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Gabriel Barsamian-Serta</h1>
+                <h2 class="text-xl text-primary font-medium mb-6">
+                    <span class="lang-fr">Étudiant en École d'Ingénieur du Numérique</span>
+                    <span class="lang-en">Digital Engineering Student</span>
+                </h2>
+                <p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <span class="lang-fr">Étudiant en informatique passionné par les algorithmes, la sécurité des systèmes et la création de solutions logicielles efficaces. À la recherche de stages pour appliquer mes connaissances à des projets concrets.</span>
+                    <span class="lang-en">Computer science student passionate about algorithms, system security, and creating efficient software solutions. Looking for internships to apply my knowledge to real-world projects.</span>
+                </p>
+            </div>
+
+            <!-- Elevator Pitch Vidéo Intégrée -->
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 mb-10">
+                <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-video text-primary mr-2"></i> Elevator Pitch</h3>
+                <div class="aspect-video bg-slate-900 rounded-xl overflow-hidden shadow-inner">
+                    <iframe 
+                        class="w-full h-full" 
+                        src="https://www.youtube.com/embed/fcq1LElcDGo?si=EM9dcQPR1ItuG9Jd" 
+                        title="Elevator Pitch - Gabriel Barsamian-Serta" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <h3 class="text-xl font-bold mb-4"><i class="fa-solid fa-code text-primary mr-2"></i> <span class="lang-fr">Compétences</span><span class="lang-en">Skills</span></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-primary dark:text-indigo-300 text-sm font-semibold rounded-lg border border-indigo-100 dark:border-indigo-800">Ada & Python</span>
+                        <span class="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-primary dark:text-indigo-300 text-sm font-semibold rounded-lg border border-indigo-100 dark:border-indigo-800">MS Office</span>
+                        <span class="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-primary dark:text-indigo-300 text-sm font-semibold rounded-lg border border-indigo-100 dark:border-indigo-800">
+                            <span class="lang-fr">Mathématiques avancées</span><span class="lang-en">Advanced mathematics</span>
+                        </span>
+                        <span class="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-primary dark:text-indigo-300 text-sm font-semibold rounded-lg border border-indigo-100 dark:border-indigo-800">
+                            <span class="lang-fr">Anglais (C1 TOEIC)</span><span class="lang-en">English (C1 TOEIC)</span>
+                        </span>
+                        <span class="px-3 py-1.5 bg-indigo-50 dark:bg-indigo-900/30 text-primary dark:text-indigo-300 text-sm font-semibold rounded-lg border border-indigo-100 dark:border-indigo-800">
+                            <span class="lang-fr">Espagnol (B1)</span><span class="lang-en">Spanish (B1)</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                    <h3 class="text-xl font-bold mb-4"><i class="fa-solid fa-person-running text-primary mr-2"></i> <span class="lang-fr">Activités</span><span class="lang-en">Activities</span></h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-semibold rounded-lg border border-emerald-100 dark:border-emerald-800">
+                            <span class="lang-fr">Athlétisme (12 ans en club)</span><span class="lang-en">Athletics (12 years)</span>
+                        </span>
+                        <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-semibold rounded-lg border border-emerald-100 dark:border-emerald-800">
+                            <span class="lang-fr">Cuisine</span><span class="lang-en">Cooking</span>
+                        </span>
+                        <span class="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-semibold rounded-lg border border-emerald-100 dark:border-emerald-800">
+                            <span class="lang-fr">Président de liste BDE</span><span class="lang-en">Student Union (BDE) President</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Expérience et Formation -->
+        <section id="experience" class="scroll-mt-24">
+            
+            <!-- Sous-rubrique : Expériences Professionnelles -->
+            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
+                <i class="fa-solid fa-briefcase text-primary mr-3"></i> 
+                <span class="lang-fr">Expériences Professionnelles & Bénévolat</span><span class="lang-en">Professional & Volunteer Experience</span>
+            </h2>
+            
+            <div class="space-y-4 mb-16">
+                <!-- Expérience 1 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                            <span class="lang-fr">Bénévolat - Maraudes avec l'Ordre de Malte</span>
+                            <span class="lang-en">Volunteer work - Soup runs with the Order of Malta</span>
+                        </h3>
+                        <p class="text-primary font-medium text-sm">Paris | 2024</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-md">
+                        <span class="lang-fr">Participation à des tournées de distribution auprès de personnes sans-abri. Sensibilisation aux réalités de la grande précarité.</span>
+                        <span class="lang-en">Participated in distribution tours for homeless individuals. Teamwork and awareness-raising regarding the realities of severe poverty.</span>
+                    </p>
+                </div>
+                <!-- Expérience 2 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                            <span class="lang-fr">Stage en Production Industrielle</span>
+                            <span class="lang-en">Industrial Production Intern</span>
+                        </h3>
+                        <p class="text-primary font-medium text-sm">Usine de cartes à puce, Barcelone | 2022</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-md">
+                        <span class="lang-fr">Immersion en environnement international. Observation et participation à la fabrication de cartes à puce (encapsulation, tests).</span>
+                        <span class="lang-en">Immersed in an international work environment. Observed and participated in manufacturing stages of smart cards (encapsulation, testing).</span>
+                    </p>
+                </div>
+                <!-- Expérience 3 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                            <span class="lang-fr">Stage - Cabinet de kinésithérapie</span>
+                            <span class="lang-en">Internship - Physiotherapy clinic</span>
+                        </h3>
+                        <p class="text-primary font-medium text-sm">Verrières-le-Buisson | 2022</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-md">
+                        <span class="lang-fr">Observation de séances de rééducation fonctionnelle. Aide à la marche et soutien à la mobilité pour les personnes âgées.</span>
+                        <span class="lang-en">Observation of functional rehabilitation sessions. Assisted with walking and provided mobility support for elderly patients.</span>
+                    </p>
+                </div>
+                <!-- Expérience 4 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">
+                            Connect Data
+                        </h3>
+                        <p class="text-primary font-medium text-sm">Bièvres | 2021</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-md">
+                        <span class="lang-fr">Réception des livraisons, préparation des commandes clients et gestion du stock en base de données.</span>
+                        <span class="lang-en">Received electronic equipment deliveries, prepared customer orders, managed stock and updated references.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sous-rubrique : Parcours & Formations -->
+            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
+                <i class="fa-solid fa-graduation-cap text-primary mr-3"></i> 
+                <span class="lang-fr">Parcours & Formations</span><span class="lang-en">Education & Background</span>
+            </h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">ENSEEIHT</h3>
+                        <p class="text-primary font-medium text-sm">2026 - 2029+</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
+                        <span class="lang-fr">École d'ingénieur - Sciences du numérique.</span>
+                        <span class="lang-en">Digital Engineering School - Digital science.</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Lycée Chaptal</h3>
+                        <p class="text-primary font-medium text-sm">2024 - 2026</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
+                        <span class="lang-fr">Classe Préparatoire aux Grandes Écoles (CPGE) - PSI.</span>
+                        <span class="lang-en">Preparatory class (CPGE) - PSI.</span>
+                    </p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white">Groupe scolaire Sophie Barat</h3>
+                        <p class="text-primary font-medium text-sm">Obtenu en 2024</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm md:text-right mt-2 md:mt-0 max-w-sm">
+                        <span class="lang-fr">Baccalauréat - Spécialités Physique et Mathématiques.</span>
+                        <span class="lang-en">High school diploma - Physics and Mathematics.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Projets -->
+        <section id="projets" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
+                <i class="fa-solid fa-folder-open text-primary mr-3"></i> 
+                <span class="lang-fr">Mes Projets</span><span class="lang-en">My Projects</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Projet Unique -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md transition">
+                    <h3 class="text-xl font-bold mb-2">Extension Chrome Fnac</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                        <span class="lang-fr">Extension web développée pour Google Chrome permettant d'automatiser l'achat des produits présents dans le panier Fnac.</span>
+                        <span class="lang-en">Web extension developed for Google Chrome that automates the purchase of products in the Fnac shopping cart.</span>
+                    </p>
+                    <a href="https://github.com/gabriel-barsamianserta/fnac-extension.git" target="_blank" class="text-primary font-medium hover:underline text-sm inline-flex items-center">
+                        <i class="fa-brands fa-github mr-2"></i> 
+                        <span class="lang-fr">Voir sur GitHub</span><span class="lang-en">View on GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Contacts -->
+        <section id="contacts" class="scroll-mt-24 pb-12">
+            <h2 class="text-3xl font-bold mb-8 flex items-center border-b pb-2 dark:border-slate-700">
+                <i class="fa-solid fa-address-card text-primary mr-3"></i> 
+                <span class="lang-fr">Me Contacter</span><span class="lang-en">Contact Me</span>
+            </h2>
+            
+            <div class="bg-primary text-white p-8 rounded-3xl shadow-lg flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <p class="text-indigo-200 text-sm"><span class="lang-fr">Téléphone</span><span class="lang-en">Phone</span></p>
+                            <p class="font-semibold">06 95 44 58 50</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <p class="text-indigo-200 text-sm">Email</p>
+                            <a href="mailto:gabserta@gmail.com" class="font-semibold hover:underline">gabserta@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-xl"><i class="fa-brands fa-linkedin"></i></div>
